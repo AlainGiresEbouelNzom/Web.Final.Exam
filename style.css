@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif Gotham Rounded,
+    sans-serif;
+  font-weight: normal;
+}
+body {
+  background: rgba(117, 56, 230, 0.034);
+}
+header {
+  display: grid;
+  position: relative;
+  border: solid red 1px;
+  background: rgb(96, 112, 107);
+  color: black;
+  padding-left: 10px;
+  grid-template-columns: 60% 20% 20%;
+}
+.btn {
+  position: relative;
+  height: 30px;
+  width: 80px;
+  align-items: center;
+  top: 10px;
+  /*margin: 20px;*/
+  background: rgb(150, 190, 216);
+  border-radius: 10px;
+}
+.btn:hover {
+  background: rgb(6, 212, 248);
+  color: white;
+  transition: 0.2s;
+}
+.animation-grid {
+  position: relative;
+  border: solid rgb(76, 0, 255) 1px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+.animation-grid video {
+  border: solid rgb(255, 0, 0) 1px;
+  text-align: center;
+}
+.animation-border {
+  position: relative;
+  border: solid rgb(251, 255, 0) 1px;
+}
+footer {
+  display: grid;
+  position: relative;
+  border: solid red 1px;
+  background: rgb(96, 112, 107);
+  color: black;
+  padding-left: 10px;
+  grid-template-columns: 75% 25%;
+  font-size: 18px;
+  font-weight: bold;
+}
+footer p {
+  font-size: 12px;
+  font-family: monospace;
+}
+footer :hover {
+  color: aqua;
+  
+}
