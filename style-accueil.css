@@ -69,7 +69,7 @@ footer {
   color: rgb(3, 33, 44);
   padding-left: 10px;
   padding-top: 10px;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 70% 30%;
   font-size: 18px;
   font-weight: bold;
   box-shadow: #0089ff -1px 1px 17px 0px;
