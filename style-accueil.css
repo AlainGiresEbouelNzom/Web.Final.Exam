@@ -55,12 +55,50 @@ header a {
 .animation-grid video {
   /*border: solid rgb(255, 0, 0) 1px;*/
   text-align: center;
-  box-shadow: #6a7279 -1px 1px 6px 1px;;
+  box-shadow: #6a7279 -1px 1px 6px 1px;
 }
 .animation-border {
   position: relative;
   /* border: solid rgb(251, 255, 0) 1px;*/
 }
+
+.activities {
+  display: grid;
+  background: #73919b;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.desc-adress {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border: #0089ff solid 1px;
+  font-size: medium;
+  font-family: cursive;
+}
+.play-pause-trash {
+  position: relative;
+  display: grid;
+  border: #ff0015 solid 1px;
+  grid-template-columns: 5% 5% 80%;
+}
+.play-pause-trash button {
+  position: relative;
+
+  width: 50px;
+  left: 400px;
+  background: #6a7279;
+  border-radius: 15px;
+}
+#play {
+  visibility: hidden;
+}
+
+#pause {
+  visibility: hidden;
+}
+
 footer {
   display: grid;
   position: relative;
@@ -76,16 +114,16 @@ footer {
   border-radius: 10px;
   margin-top: 20px;
 }
+
 footer p {
   font-size: 16px;
   font-family: monospace;
   color: rgb(3, 2, 15);
-  
 }
-footer span:hover { 
+footer span:hover {
   color: aqua;
 }
 
-footer p:hover { 
+footer p:hover {
   color: aqua;
 }

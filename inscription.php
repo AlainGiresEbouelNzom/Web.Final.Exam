@@ -13,18 +13,18 @@
     <header>
         <div> <a href="https://www.uqtr.ca/">UQTR</a></div>
 
-        <button  id="home" class="btn">Accueil</button>
+        <button id="home" class="btn">Accueil</button>
         <button id="registration" class="btn">Inscription</button>
     </header>
 
-    
+
     <div class="form-style-5">
-        <form action="" method="post">
+        <form action="inscription.php" method="post">
             <fieldset>
                 <legend><span class="number">*</span> Inscription</legend>
                 <input type="text" name="field1" id="name" placeholder="Saisir le nom de l'activité">
-                <textarea name="field3" id="description" placeholder="Saisir la description"></textarea>
-                <input type="text" name="field2" id="image-adress" placeholder="Saisir l'adresse de l'image">
+                <textarea name="field2" id="description" placeholder="Saisir la description"></textarea>
+                <input type="text" name="field3" id="image-adress" placeholder="Saisir l'adresse de l'image">
                 <label for="job">Etat de l'activité</label>
                 <select id="activity-statut" name="field4">
                     <optgroup id="statut" label="Statut">
@@ -34,13 +34,38 @@
                 </select>
             </fieldset>
 
-            
+
             <button id="send" value="Envoyer">Envoyer</button>
             <button id="cancel">Annuler</button>
-            
+
         </form>
     </div>
     <div class="activity"></div>
+    <div>
+        <?php
+        if (isset($_POST['field1'])) {
+            $message =  array();
+
+            $message['nom'] = $_POST['field1'];
+
+            $message['description'] = $_POST['field2'];
+
+            $message['adresse'] = $_POST['field3'];
+
+            $message['statut'] = $_POST['field4'];
+
+            $js = file_get_contents('message.json');
+
+            $js = json_decode($js, true);
+
+            $js[] = $message;
+
+            $js = json_encode($js);
+
+            file_put_contents('message.json', $js);
+        } ?>
+    </div>
+
     <footer>
         <div>
             <span>Restons en contact</span>
