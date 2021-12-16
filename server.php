@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet_final</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="style-accueil.css">
 
 </head>
@@ -13,10 +13,10 @@
 <body>
 
     <header>
-        <div> <a href="https://www.uqtr.ca/">UQTR</a></div>
+        <div id="uqtr"> <a href="https://www.uqtr.ca/">UQTR</a></div>
 
         <button id="home1" class="btn">Accueil</button>
-        <button id="insc" class="btn">Inscription</button>
+        <button onclick="window.location.href = 'inscription.php';" id="insc" class="btn">Inscription</button>
     </header>
     <div class="animation-grid">
         <div class="animation-border"></div>
@@ -31,25 +31,191 @@
     $message = file_get_contents('message.json');
     $message = json_decode($message, true);
 
-    for ($i = 0; $i < count($message); $i++) :
-
     ?>
 
-        <div class="activities">
-            <h2><?php echo $message[$i]['nom']; ?></h2>
-            <div class="desc-adress">
-                <b id="description"><?php echo $message[$i]['description']; ?></b>
-                <div><img height="140px" src="<?php echo $message[$i]['adresse']; ?>" alt=""></div>
+    <div activity1 class="activities" id="activity-1">
+        <h2><?php if (isset($message[0])) echo $message[0]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[0])) echo $message[0]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[0])) echo $message[0]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[0])) {
+                    if ($message[0]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
             </div>
-            <div class="play-pause-trash">
-                <div id="play"><img height="25px" src="./images/play.webp" alt=""></div>
-                <div id="pause"><img height="25px" src="./images/pause2.png" alt=""></div>
-                <button id="trash"> <img height="25px" src="/images/trash.jpg" alt=""></button>
-            </div>
-
+            <button id="trash1"> <?php if (isset($message[0])) {
+                                        echo '<img height="25px" src="/images/trash.jpg" alt="">';
+                                    } ?></button>
         </div>
 
-    <?php endfor ?>
+    </div>
+
+    <div class="activities" id="activity-2">
+        <h2><?php if (isset($message[1])) echo $message[1]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[1])) echo $message[1]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[1])) echo $message[1]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[1])) {
+                    if ($message[1]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash2"><?php if (isset($message[0])) {
+                                    echo '<img height="25px" src="/images/trash.jpg" alt="">';
+                                } ?></button>
+        </div>
+
+    </div>
+    <div class="activities" id="activity-3">
+        <h2><?php if (isset($message[2])) echo $message[2]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[2])) echo $message[2]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[2])) echo $message[2]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[2])) {
+                    if ($message[2]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash3"> <?php if (isset($message[0])) {
+                                        echo '<img height="25px" src="/images/trash.jpg" alt="">';
+                                    } ?></button>
+        </div>
+
+    </div>
+    <div class="activities" id="activity-4">
+        <h2><?php if (isset($message[3])) echo $message[3]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[3])) echo $message[3]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[3])) echo $message[3]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[3])) {
+                    if ($message[3]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash4"> <?php if (isset($message[0])) {
+                                        echo '<img height="25px" src="/images/trash.jpg" alt="">';
+                                    } ?></button>
+        </div>
+
+    </div>
+
+    <div class="activities" id="activity-5">
+        <h2><?php if (isset($message[4])) echo $message[4]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[4])) echo $message[4]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[4])) echo $message[4]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[4])) {
+                    if ($message[4]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash5"> <?php if (isset($message[4])) {
+                                        echo '<img height="25px" src="/images/trash.jpg" alt="">';
+                                    } ?></button>
+        </div>
+    </div>
+
+    <div class="activities" id="activity-6">
+        <h2><?php if (isset($message[5])) echo $message[5]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[5])) echo $message[5]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[5])) echo $message[5]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[5])) {
+                    if ($message[5]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash6"> <img height="25px" src="/images/trash.jpg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="activities" id="activity-7">
+        <h2><?php if (isset($message[6])) echo $message[6]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[6])) echo $message[6]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[6])) echo $message[6]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[6])) {
+                    if ($message[6]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash7"> <img height="25px" src="/images/trash.jpg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="activities" id="activity-8">
+        <h2><?php if (isset($message[7])) echo $message[7]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[7])) echo $message[7]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[7])) echo $message[7]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[7])) {
+                    if ($message[7]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash8"> <img height="25px" src="/images/trash.jpg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="activities" id="activity-9">
+        <h2><?php if (isset($message[8])) echo $message[8]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[8])) echo $message[8]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[8])) echo $message[8]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[8])) {
+                    if ($message[8]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash9"> <img height="25px" src="/images/trash.jpg" alt=""></button>
+        </div>
+    </div>
+
+
+    <div class="activities" id="activity-10">
+        <h2><?php if (isset($message[9])) echo $message[9]['nom']; ?></h2>
+        <div class="desc-adress">
+            <b id="description"><?php if (isset($message[9])) echo $message[9]['description']; ?></b>
+            <div><img height="140px" src="<?php if (isset($message[9])) echo $message[9]['adresse']; ?>" alt=""></div>
+        </div>
+        <div class="play-pause-trash">
+            <div id="play">
+                <?php if (isset($message[9])) {
+                    if ($message[9]['statut'] == 'false')  echo '<img height="25px" src="./images/pause2.png" alt="">';
+                    else echo '<img height="25px" src="./images/play.webp" alt="">';
+                } ?>
+            </div>
+            <button id="trash10"> <img height="25px" src="/images/trash.jpg" alt=""></button>
+        </div>
+    </div>
+
 
     <footer>
         <div>

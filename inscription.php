@@ -11,9 +11,9 @@
 
 <body>
     <header>
-        <div> <a href="https://www.uqtr.ca/">UQTR</a></div>
+        <div id="uqtr"> <a href="https://www.uqtr.ca/">UQTR</a></div>
 
-        <button id="home" class="btn">Accueil</button>
+        <button onclick="window.location.href = 'server.php';" id="home" class="btn">Accueil</button>
         <button id="registration" class="btn">Inscription</button>
     </header>
 
@@ -63,7 +63,26 @@
             $js = json_encode($js);
 
             file_put_contents('message.json', $js);
-        } ?>
+
+            /* header("location:./");*/
+        } else if (isset($_GET['del'])) {
+            $message = file_get_contents('message.json');
+            $message = json_decode($message, true);
+
+            $verifier = array();
+
+            for ($i = 0; $i < count($message); $i++) {
+                if ($message[$i]['id'] != $_GET['del']) {
+                    $verifier[] = $message[$i];
+                }
+            }
+
+            $verifier = json_encode($verifier);
+            file_put_contents('message.json', $verifier);
+
+            header(" location : server.php");
+        }
+        ?>
     </div>
 
     <footer>

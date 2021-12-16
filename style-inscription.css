@@ -23,6 +23,17 @@ header {
   border-radius: 10px;
 }
 
+#uqtr {
+  background: #81a7c9;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+#uqtr :hover {
+  box-shadow: #0089ff -1px 1px 20px 7px;
+}
 .btn {
   position: relative;
   height: 30px;

@@ -22,7 +22,18 @@ header {
   box-shadow: #0089ff -1px 1px 17px 0px;
   border-radius: 10px;
 }
-
+#uqtr,
+#uqtr1 {
+  background: #81a7c9;
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+#uqtr :hover {
+  box-shadow: #0089ff -1px 1px 20px 7px;
+}
 .btn {
   position: relative;
   height: 30px;
@@ -66,8 +77,12 @@ header a {
   display: grid;
   background: #73919b;
   color: black;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
+  border: solid rgb(251, 255, 0) 1px;
+}
+.activities-visibility {
+  visibility: hidden;
 }
 
 .desc-adress {
@@ -91,13 +106,13 @@ header a {
   background: #6a7279;
   border-radius: 15px;
 }
-#play {
-  visibility: hidden;
+/*#play {
+ /* visibility: hidden;
 }
 
 #pause {
   visibility: hidden;
-}
+}*/
 
 footer {
   display: grid;
