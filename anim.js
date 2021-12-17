@@ -30,8 +30,8 @@ activities = document.querySelectorAll(".activities");
    button.style.visibility = "hidden";
 
   });*/
-
-
+ 
+ 
 
 trash1.addEventListener('click', ()=>{  
    activity1.style.visibility = "hidden";
@@ -63,25 +63,21 @@ trash9.addEventListener('click', ()=>{
 trash10.addEventListener('click', ()=>{  
   activity10.style.visibility = "hidden";
 })
+/*
+window.onload = function(){
 
-
-
-
+  $.get("message.json", function(message){
+      console.log(message);
+      });
+  }*/
+ /* var obj = JSON.parse(localStorage.getItem('message.json'));
+  console.log(obj);*/
 //fetch("message.json").then(res=>res.json()).then(data=>console.log(data));
 
 document.addEventListener("DOMContentLoaded", () => {
   activity1.style.visibility = "hidden";
 })
-  alert("Test en cours");
- /* activities.forEach(element => {
-    element.classList.add(".activities-visibility")
-    
-  })
-  
-  
-  //location.reload();
-
   
  
-  //document.getElementById("send").addEventListener("click", showActivity);
-});*/
+
+  

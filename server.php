@@ -230,6 +230,7 @@
 
         </div>
     </footer>
+
     <script src="anim.js"></script>
 </body>
 
