@@ -57,6 +57,43 @@ header a {
   color: white;
   transition: 0.2s;
 }
+
+#searchbar{
+  margin-left: 15%;
+  margin-bottom: 15px;
+  padding:15px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+   width: 30%;
+   -webkit-transition: width 0.15s ease-in-out;
+   transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+     change its width to 100% */
+input[type=text]:focus {
+  width: 70%;
+}
+
+#list{
+ font-size:  1.5em;
+ margin-right: 15px;
+ list-style: none;
+}
+
+.activities{
+display: list-item;  
+display: grid;
+background: #73919b;
+color: black;
+margin-top: 25px;
+
+padding: 10px;
+border: solid rgb(251, 255, 0) 1px;  
+} 
+
 .animation-grid {
   position: relative;
   /*border: solid rgb(76, 0, 255) 1px;*/
@@ -73,14 +110,7 @@ header a {
   /* border: solid rgb(251, 255, 0) 1px;*/
 }
 
-.activities {
-  display: grid;
-  background: #73919b;
-  color: black;
-  margin: 20px;
-  padding: 10px;
-  border: solid rgb(251, 255, 0) 1px;
-}
+
 .activities-visibility {
   visibility: hidden;
 }

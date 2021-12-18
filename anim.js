@@ -5,7 +5,7 @@ const activity3 = document.getElementById("activity-3");
 const activity4 = document.getElementById("activity-4");
 const activity5 = document.getElementById("activity-5");
 const activity6 = document.getElementById("activity-6");
-const activity7= document.getElementById("activity-7");
+const activity7 = document.getElementById("activity-7");
 const activity8 = document.getElementById("activity-8");
 const activity9 = document.getElementById("activity-9");
 const activity10 = document.getElementById("activity-10");
@@ -20,64 +20,102 @@ const trash7 = document.getElementById("trash7");
 const trash8 = document.getElementById("trash8");
 const trash9 = document.getElementById("trash9");
 const trash10 = document.getElementById("trash10");
-const alltrash =  document.querySelectorAll(".trash");
-
+const alltrash = document.querySelectorAll(".trash");
 
 activities = document.querySelectorAll(".activities");
 
-/*alltrash.forEach(button => {
-  button.addEventListener('click', () => {
-   button.style.visibility = "hidden";
+function search_activity() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName("activities");
 
-  });*/
- 
- 
+  for (i = 0; i < x.length; i++) {
+    if (!x[i].innerHTML.toLowerCase().includes(input)) {
+      x[i].style.display = "none";
+    } else {
+      x[i].style.display = "list-item";
+    }
+  }
+}
+function display_activity() {
+  let input = "empty";
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName("activities");
+  let y = document.getElementsByClassName("active");
 
-trash1.addEventListener('click', ()=>{  
-   activity1.style.visibility = "hidden";
-})
-trash2.addEventListener('click', ()=>{  
-  activity2.style.visibility = "hidden";
-})
-trash3.addEventListener('click', ()=>{  
-  activity3.style.visibility = "hidden";
-})
-trash4.addEventListener('click', ()=>{  
-  activity4.style.visibility = "hidden";
-})
-trash5.addEventListener('click', ()=>{  
-  activity5.style.visibility = "hidden";
-})
-trash6.addEventListener('click', ()=>{  
-  activity6.style.visibility = "hidden";
-})
-trash7.addEventListener('click', ()=>{  
-  activity7.style.visibility = "hidden";
-})
-trash8.addEventListener('click', ()=>{  
-  activity8.style.visibility = "hidden";
-})
-trash9.addEventListener('click', ()=>{  
-   activity9.style.visibility = "hidden";
-})
-trash10.addEventListener('click', ()=>{  
-  activity10.style.visibility = "hidden";
-})
-/*
-window.onload = function(){
-
-  $.get("message.json", function(message){
-      console.log(message);
-      });
-  }*/
- /* var obj = JSON.parse(localStorage.getItem('message.json'));
-  console.log(obj);*/
-//fetch("message.json").then(res=>res.json()).then(data=>console.log(data));
-
-document.addEventListener("DOMContentLoaded", () => {
-  activity1.style.visibility = "hidden";
-})
+  for (i = 0; i < x.length; i++) {
+    
+    if(y[i].textContent.includes("empty")) {
+      x[i].style.display = "none";
+    } else {
+      x[i].style.display = "list-item";
+    }
+  }
   
- 
+}
 
-  
+
+trash1.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity1.style.display = "none";
+  }
+});
+trash2.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity2.style.display = "none";
+  }
+});
+trash3.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity3.style.display = "none";
+  }
+});
+trash4.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity4.style.display = "none";
+  }
+});
+trash5.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity5.style.display = "none";
+  }
+});
+trash6.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity6.style.display = "none";
+  }
+});
+trash7.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity8.style.display = "none";
+  }
+});
+trash8.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity8.style.display = "none";
+  }
+});
+trash9.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity9.style.display = "none";
+  }
+});
+trash10.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity10.style.display = "none";
+  }
+});
+
+let y = document.getElementsByClassName("activities");
+document.addEventListener("DOMContentLoaded", display_activity(), () => { 
+});
