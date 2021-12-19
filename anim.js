@@ -9,6 +9,16 @@ const activity7 = document.getElementById("activity-7");
 const activity8 = document.getElementById("activity-8");
 const activity9 = document.getElementById("activity-9");
 const activity10 = document.getElementById("activity-10");
+const activity11 = document.getElementById("activity-11");
+const activity12 = document.getElementById("activity-12");
+const activity13 = document.getElementById("activity-13");
+const activity14 = document.getElementById("activity-14");
+const activity15 = document.getElementById("activity-15");
+const activity16 = document.getElementById("activity-16");
+const activity17 = document.getElementById("activity-17");
+const activity18 = document.getElementById("activity-18");
+const activity19 = document.getElementById("activity-19");
+const activity20 = document.getElementById("activity-20");
 
 const trash1 = document.getElementById("trash1");
 const trash2 = document.getElementById("trash2");
@@ -20,23 +30,37 @@ const trash7 = document.getElementById("trash7");
 const trash8 = document.getElementById("trash8");
 const trash9 = document.getElementById("trash9");
 const trash10 = document.getElementById("trash10");
+const trash11 = document.getElementById("trash11");
+const trash12 = document.getElementById("trash12");
+const trash13 = document.getElementById("trash13");
+const trash14 = document.getElementById("trash14");
+const trash15 = document.getElementById("trash15");
+const trash16 = document.getElementById("trash16");
+const trash17 = document.getElementById("trash17");
+const trash18 = document.getElementById("trash18");
+const trash19 = document.getElementById("trash19");
+const trash20 = document.getElementById("trash20");
 const alltrash = document.querySelectorAll(".trash");
 
 activities = document.querySelectorAll(".activities");
 
 function search_activity() {
-  let input = document.getElementById("searchbar").value;
+  let input = document.getElementById("searchbar").value;  ;
   input = input.toLowerCase();
   let x = document.getElementsByClassName("activities");
 
   for (i = 0; i < x.length; i++) {
     if (!x[i].innerHTML.toLowerCase().includes(input)) {
       x[i].style.display = "none";
+
     } else {
-      x[i].style.display = "list-item";
-    }
-  }
+      x[i].style.display = "list-item";          
+    }     
+  }  
+  if(input == "")
+  location.reload();
 }
+
 function display_activity() {
   let input = "empty";
   input = input.toLowerCase();
@@ -50,10 +74,8 @@ function display_activity() {
     } else {
       x[i].style.display = "list-item";
     }
-  }
-  
+  }  
 }
-
 
 trash1.addEventListener("click", () => {
   var res = confirm("Êtes-vous sûr de vouloir supprimer?");
@@ -94,7 +116,7 @@ trash6.addEventListener("click", () => {
 trash7.addEventListener("click", () => {
   var res = confirm("Êtes-vous sûr de vouloir supprimer?");
   if(res){
-    activity8.style.display = "none";
+    activity7.style.display = "none";
   }
 });
 trash8.addEventListener("click", () => {
@@ -113,6 +135,67 @@ trash10.addEventListener("click", () => {
   var res = confirm("Êtes-vous sûr de vouloir supprimer?");
   if(res){
     activity10.style.display = "none";
+  }
+});
+
+trash11.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity11.style.display = "none";   
+  }
+});
+trash12.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity12.style.display = "none";
+  }
+});
+trash13.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity13.style.display = "none";
+  }
+});
+trash14.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity14.style.display = "none";
+  }
+});
+trash15.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity15.style.display = "none";
+  }
+});
+trash16.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity16.style.display = "none";
+  }
+});
+trash17.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity17.style.display = "none";
+  }
+});
+trash18.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity18.style.display = "none";
+  }
+});
+trash19.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity19.style.display = "none";
+  }
+});
+trash20.addEventListener("click", () => {
+  var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+  if(res){
+    activity20.style.display = "none";
   }
 });
 

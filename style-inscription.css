@@ -57,7 +57,13 @@ header a {
   color: white;
   transition: 0.2s;
 }
-
+.warning {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: larger;
+  color: rgb(241, 56, 56);
+  text-align: center;
+}
 .form-style-5 {
   max-width: 500px;
   padding: 10px 20px;
